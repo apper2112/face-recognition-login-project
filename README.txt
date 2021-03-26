@@ -5,6 +5,9 @@
 This program was written and tested on Linux
 You may need to alter minor things for Windows
 
+You will need to alter the wallpaper image and geometry dimensions
+to suit your screen.
+
 To remove a user manually:
     delete users image from images folder
     delete users entry in registered.csv file
