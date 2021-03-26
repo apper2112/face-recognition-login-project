@@ -15,7 +15,7 @@ IMAGES_DIR = BASE_DIR + '/images'
 DT_STRING = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 
 
-# LOGGING [REGISTERED, LOGGED-IN, LOGGED-OUT]
+# LOGGING
 LOG_FORMAT = logging.Formatter('%(asctime)s %(levelname)s %(funcName)s(%(lineno)d) %(message)s')
 logFile = 'faceRec.log'
 handler = RotatingFileHandler(logFile, mode='a', maxBytes=4000,
@@ -91,9 +91,6 @@ class Window:
 		if not person:
 			messagebox.showinfo("Alert", "Please enter your username    ")
 			return
-		print('self.og_ids =', self.labels_ids)
-		print('self.og_labels =', self.og_labels)
-		print('person =', person)
 		if person + '.png' in [f for f in os.listdir(IMAGES_DIR)]:
 			messagebox.showinfo("Alert", "Username taken    ")
 			return
